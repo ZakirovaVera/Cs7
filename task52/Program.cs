@@ -67,3 +67,4 @@ double[] ArithmeticMeanColumn(int[,] inArray)
     }
     return res;
 }
+
