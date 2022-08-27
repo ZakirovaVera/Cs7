@@ -29,6 +29,7 @@ int GetNumberFromUser(string message, string errorMessage)
         Console.WriteLine(errorMessage);
     }
 }
+
 //заполнение массива
 int[,] GetArray(int m, int n, int minValue, int maxValue)
 {
@@ -42,6 +43,7 @@ int[,] GetArray(int m, int n, int minValue, int maxValue)
     }
     return result;
 }
+
 //вывод массива в консоль
 void PrintArray(int[,] inArray)
 {
@@ -54,17 +56,20 @@ void PrintArray(int[,] inArray)
         Console.WriteLine();
     }
 }
+
 //ср.арифметическое столбоц
 double[] ArithmeticMeanColumn(int[,] inArray)
 {
-    double[] res = new double[inArray.GetLength(1)];
+    double[] result = new double[inArray.GetLength(1)];
     for (int j = 0; j < inArray.GetLength(1); j++)
     {
+        double res=0;
         for (int i = 0; i < inArray.GetLength(0); i++)
         {
-            res[j] += inArray[i, j];
-        }
-    }
-    return res;
-}
+            res += inArray[i, j];
 
+        }
+        result[j] = Math.Round((res/ inArray.GetLength(0)), 1);
+    }
+    return result;
+}
