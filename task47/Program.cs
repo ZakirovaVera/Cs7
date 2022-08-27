@@ -51,4 +51,3 @@ void PrintArray(double[,] inArray)
         Console.WriteLine();
     }
 }
-
