@@ -59,7 +59,7 @@ void PrintArray(int[,] inArray)
         Console.WriteLine();
     }
 }
-
+//вывод элемента по заданной пользователем позиции
 void ElementValueArray(int m, int n, int[,] inArray)
 {
     for (int i = 0; i < inArray.GetLength(0); i++)
@@ -70,6 +70,6 @@ void ElementValueArray(int m, int n, int[,] inArray)
                 Console.WriteLine($"{m} {n} -> {inArray[i, j]}");
         }
     }
-    if ((m > inArray.GetLength(0) || n > inArray.GetLength(1)) || (m < 0 || n < 0))
+    if ((m > inArray.GetLength(0) || n > inArray.GetLength(1)) || (m <= 0 || n <= 0))
     Console.WriteLine($"{m} {n} -> Такого числа нет в массиве");
 }
