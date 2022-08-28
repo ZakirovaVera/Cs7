@@ -17,7 +17,6 @@ int endArray = GetNumberFromUser("Введите максимальное чис
 
 int rowsNumber = GetNumberFromUser("Введите номер строки: ", "Ошибка ввода!");
 int columsNumber = GetNumberFromUser("Введите номер столбца: ", "Ошибка ввода!");
-Console.WriteLine();
 
 int[,] array = GetArray(rows, columns, startArray, endArray);
 PrintArray(array);
