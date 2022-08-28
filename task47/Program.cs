@@ -7,8 +7,8 @@
 
 Console.Clear();
 
-int rows = GetNumberFromUser("Введите число строк массива: ", "Ошибка ввода!");
-int columns = GetNumberFromUser("Введите число столбцов массива: ", "Ошибка ввода!");
+int rows = GetNumberFromUser("Введите m строк массива: ", "Ошибка ввода!");
+int columns = GetNumberFromUser("Введите n столбцов массива: ", "Ошибка ввода!");
 double startArray = GetNumberFromUser("Введите минимальное число массива: ", "Ошибка ввода!");
 double endArray = GetNumberFromUser("Введите максимальное число массива: ", "Ошибка ввода!");
 
