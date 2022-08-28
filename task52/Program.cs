@@ -63,13 +63,12 @@ double[] ArithmeticMeanColumn(int[,] inArray)
     double[] result = new double[inArray.GetLength(1)];
     for (int j = 0; j < inArray.GetLength(1); j++)
     {
-        double res=0;
+        double res = 0;
         for (int i = 0; i < inArray.GetLength(0); i++)
         {
             res += inArray[i, j];
-
         }
-        result[j] = Math.Round((res/ inArray.GetLength(0)), 1);
+        result[j] = Math.Round((res / inArray.GetLength(0)), 1);
     }
     return result;
 }
