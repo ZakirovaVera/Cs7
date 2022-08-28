@@ -17,6 +17,7 @@ int endArray = GetNumberFromUser("Введите максимальное чис
 
 int rowsNumber = GetNumberFromUser("Введите номер строки: ", "Ошибка ввода!");
 int columsNumber = GetNumberFromUser("Введите номер столбца: ", "Ошибка ввода!");
+Console.WriteLine();
 
 int[,] array = GetArray(rows, columns, startArray, endArray);
 PrintArray(array);
@@ -34,6 +35,7 @@ int GetNumberFromUser(string message, string errorMessage)
         Console.WriteLine(errorMessage);
     }
 }
+
 //заполнение массива
 int[,] GetArray(int m, int n, int minValue, int maxValue)
 {
@@ -47,6 +49,7 @@ int[,] GetArray(int m, int n, int minValue, int maxValue)
     }
     return result;
 }
+
 //вывод массива в консоль
 void PrintArray(int[,] inArray)
 {
@@ -59,17 +62,14 @@ void PrintArray(int[,] inArray)
         Console.WriteLine();
     }
 }
+
 //вывод элемента по заданной пользователем позиции
 void ElementValueArray(int m, int n, int[,] inArray)
 {
-    for (int i = 0; i < inArray.GetLength(0); i++)
-    {
-        for (int j = 0; j < inArray.GetLength(1); j++)
-        {
-            if (i == m - 1 && j == n - 1)
-                Console.WriteLine($"{m} {n} -> {inArray[i, j]}");
-        }
-    }
     if ((m > inArray.GetLength(0) || n > inArray.GetLength(1)) || (m <= 0 || n <= 0))
-    Console.WriteLine($"{m} {n} -> Такого числа нет в массиве");
+    {
+        Console.WriteLine($"{m} {n} -> Такого числа нет в массиве");
+        return;
+    }
+    Console.WriteLine($"{m} {n} -> {inArray[m - 1, n - 1]}");
 }
